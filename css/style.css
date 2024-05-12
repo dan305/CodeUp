@@ -1,0 +1,1207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cyan: #75C8E7 ;
+    --white: #F2F2F2;
+    --blue_background: #11161C ;
+    --cyan_background: #263445 ;
+    --text-color: #959DA5;
+    --footer-bg: #0D1117;
+    --footer-bottom-bg: #161B22;
+    --white: white;
+    --link-color: #959DA5;
+    --link-hover: #2F81CF;
+    --button-border: #848D97;
+}
+body {
+    /* background-image: url(../assets/img/foto.jpg); */
+    background: radial-gradient(circle at center bottom, #263445,#11161C, #11161C, #11161C);
+    font-size: 'Poppins', sans-serif;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    color: white !important; 
+    margin-left: 0; /* Eliminar el margen izquierdo */
+}   
+
+@font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('../assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('../assets/fonts/Poppins-Light.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppins-Italic';
+  src: url('../assets/fonts/Poppins-Italic.ttf') format('truetype');
+}
+
+.logo{
+    text-align: center;
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+    
+}
+
+hr {
+    width: 70%;
+    margin: auto;
+}
+
+/* INICIO */
+.start {
+    display: flex;
+    justify-content: space-around;
+}
+
+.start img {
+    height: 49rem;
+    width: 49rem;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+
+.start h3 {
+    font-size: 40px;
+    max-width: 60%;
+    font-family: Poppins-ExtraBold;
+    position: relative;
+    margin-top: 130px;
+    margin-left: 200px;
+}
+
+.start h3 span {
+    color: #75C8E7;
+    font-weight: bold;
+    font-family: Poppins-Light;
+}
+
+.start p{
+    font-family: Poppins-Light;
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 21px;
+}
+
+.start .p2 {
+    color: #a89b27;
+}
+/* CARD */
+.card {
+    position: relative;
+    background-color: #1b1b1b !important;
+    width: 1510px; /* Reduciendo el ancho para incluir el margen */
+    height: 400px;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 50px 100px rgba(34, 44, 58, 0.08);
+    font-family: Poppins-Light;
+    margin-top: 100px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+    margin-left: auto; /* Margen izquierdo para centrar */
+    margin-right: auto; /* Margen derecho para centrar */
+}
+
+.card h2{
+    color: #f8f8f8;
+    font-size: 42px;
+    font-weight: 500;
+    padding: 30px;
+    letter-spacing: 0.5px;
+    font-family: Poppins-ExtraBold;
+}
+
+.card p{
+    color: #ccc;
+    font-size: 18px;
+    padding-left: 30px;
+    margin: 0 0 16px;
+}
+
+.card .pulse{
+    position: absolute;
+    background: #3498db;
+    width: 14px;
+    height: 14px;
+    right: 31px;
+    top: 35px;
+    border-radius: 50%;
+}
+
+.card .pulse::after{
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 0.1px solid #3498db;
+    transform-origin: center;
+    opacity: 0.8;
+    scale: 0;
+    animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse{
+    70%{
+        scale: 0;
+        opacity: 0.8;
+    }
+    100%{
+        scale: 3;
+        opacity: 0;
+    }
+}
+
+.card .chart-area{
+    position: relative;
+}
+
+.card .chart-area .grid{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-image: repeating-linear-gradient(to right, transparent 0% 3%, #f9f9f9 3% 3.5%, transparent 3% 18.65%);
+}
+
+.card .chart-area .grid::after{
+    content: "";
+    position: inherit;
+    z-index: 1;
+    bottom: 0;
+    width: inherit;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(27, 27, 27, 1), rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 1));
+}
+
+.apexcharts-tooltip.apexcharts-theme-light{
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: none;
+    padding: 4px 4px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 0;
+}
+
+.apexcharts-tooltip-title, .apexcharts-xaxistooltip-bottom.apexcharts-theme-light{
+    display: none;
+}
+
+/* INFORMACION */
+.information {
+    font-family: Poppins-ExtraBold;
+    max-width: 1000px;
+    margin-left: 190px;
+    
+}
+
+.information h2 {
+    font-size: 34px;
+}
+
+.information h2 span {
+    color:#75C8E7;
+}
+
+.information h2 i {
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.information p {
+    margin-top: 10px;
+    font-family: Poppins-Light;
+    font-size: 20px;
+}
+
+/* GALERIA */
+/*.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 800px;
+}
+
+.card {
+    position: relative;
+    left: 0;
+    width: 5rem;
+    border-radius: 1rem;
+    height: 24rem;
+    overflow: hidden;
+    background: var(--cyan_background);
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    flex: 0.25;
+}
+
+.card img {
+    height: 24rem;
+}
+
+.card:hover {
+    flex: 2;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+/* BOTON */
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 76px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 26px;
+    background-color: inherit;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #75C8E7;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-left: 200px;
+    margin-top: 50px;
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #75C8E7;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #75C8E7;
+    border-radius: 20%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #ffffff;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+    border-bottom: 5px solid white;
+    border-radius: 2px;
+  }
+  
+  .animated-button:hover svg {
+    fill: #ffffff;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px #75C8E7;
+  }
+  
+  .animated-button:hover .circle {
+    width: 620px;
+    height: 620px;
+    opacity: 1;
+  }
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+
+/* BENEFICIOS
+
+.benefits h1{
+  font-family:'Poppins-Light';
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px    ;
+  font-size: 60px;
+  max-width: 1100px;
+}
+
+.benefits h1 span{
+  color: #75C8E7  ; 
+  font-family:'Poppins-ExtraBold';
+}
+
+.benefits h1 b{
+  font-family:'Poppins-ExtraBold';
+}
+
+ 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.benefits {
+  margin-top: 50px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bar {
+  width: 10px;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.content {
+  margin-left: 20px;
+}
+
+.benefit-title {
+  margin: 0;
+  color: #333;
+}
+
+.benefit-description {
+  margin-top: 5px;
+  color: #666;
+}
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+body::after {
+  transition: background-color 0.3s ease;
+}
+
+body.scrolled::after {
+  background-color: #007bff;
+} */
+
+
+/* PASOS */
+
+
+.TitlePasos{
+  font-size: 40px;
+  max-width: 60%;
+  font-family: Poppins-Light;
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.TitlePasos span{
+  color: #0466cf;
+  font-weight: bold;
+  font-family: Poppins-ExtraBold;
+}
+
+.SeccionPasos {
+  display: flex;
+  justify-content: center;
+}
+
+.numero{
+  font-family: Poppins-ExtraBold;
+  background-color: #181d24;
+  max-width: 45px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 120px;
+  color: #0466cf;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 10px 20px #171c22; }
+
+
+.contenido h3{
+  font-family: Poppins-ExtraBold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+
+}
+
+.contenido p{
+  font-family: Poppins-Light;
+}
+.pasos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paso {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.contenido {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.imagen {
+  margin-left: 20px;
+  height: 20rem;
+  width: 20rem;
+}
+
+.imagen img {
+  max-width: 100%;
+}
+
+.paso:nth-child(even) .contenido {
+  order: 2;
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.paso:nth-child(even) .imagen {
+  order: 1;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+
+
+
+/* boton2 */
+
+/* BOTON */
+.animated-button2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 76px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 36px;
+  background-color: inherit;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px #0466cf;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.animated-button2 svg {
+  position: absolute;
+  width: 24px;
+  fill: #0466cf;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button2 .arr-1 {
+  right: 16px;
+}
+
+.animated-button2 .arr-2 {
+  left: -25%;
+}
+
+.animated-button2 .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #0466cf;
+  border-radius: 20%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button2 .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button2:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.animated-button2:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button2:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button2:hover .text {
+  transform: translateX(12px);
+  border-bottom: 5px solid white;
+  border-radius: 2px;
+}
+
+.animated-button2:hover svg {
+  fill: #ffffff;
+}
+
+.animated-button2:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #0466cf;
+}
+
+.animated-button2:hover .circle {
+  width: 620px;
+  height: 620px;
+  opacity: 1;
+}
+/* CARRUSEL*/
+
+.carousel-inner h2 {
+    color: white !important; 
+    font-family: Poppins-ExtraBold;
+    margin-top: 20px;
+}
+ .carousel-inner {
+  margin-top: 20px;
+  background-color: #26282b70;
+  height: 400px;
+  text-align: center;
+  margin-top: 100px;
+  padding: 100px;
+  color: #00A3FF;
+}
+
+.carousel-inner img{
+  width: 3rem;
+  height: 3rem;
+}
+
+/* FOOTER */
+
+.pie-pagina{
+  width: 100%;
+  background-color: #0d1117d3;
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+  width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: Poppins-ExtraBold;
+}
+.pie-pagina .grupo-1 .box p, a{
+  color: #efefef;
+  margin-bottom: 10px;
+  font-family: Poppins-Light;
+}
+.pie-pagina .grupo-1 .red-social a{
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+  color: #1539af;
+}
+.pie-pagina .grupo-2{
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+@media screen and (max-width:800px){
+  .pie-pagina .grupo-1{
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap:30px;
+      padding: 35px 0px;
+  }
+}
+
+.equipo-seccion {
+  background-color: #1539af;
+  padding: 50px;
+
+}
+
+.equipo-seccion .encabezado {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: start;
+}
+.equipo-seccion .encabezado h2 {
+  font-family: Poppins-ExtraBold;
+  font-size: 50px;
+}
+.equipo-seccion .encabezado p {
+  font-family: Poppins-Light;
+}
+
+.equipo {
+  display: flex;
+  justify-content: space-between; 
+  background-color: white;
+}
+
+/* Estilos para la sección de preguntas frecuentes */
+.faqsection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  
+}
+
+.faq {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.question {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Poppins-ExtraBold;
+  font-size: 30px;
+}
+
+.answer {
+  display: none;
+  font-family: Poppins-Light;
+  max-width: 700px;
+}
+
+.faqLine {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.faqLine{
+  background-color: white;
+  width: 750px;
+}
+
+.faq .fa-arrow-up {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.faq .arrow-down {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+
+
+/*RESPONSIVE 1440*/
+@media (max-width: 1440px) {
+  .card {
+    width: 90%;
+  }
+}
+
+
+/*1240*/
+
+@media (max-width: 1240px) {
+  .start img{
+    height: 350px;
+    width: 350px;
+    display: none;
+  }
+  
+  .card{
+    width: 80%;
+    height: 80%;
+  }
+  
+  .animated-button{
+    margin: 100px;
+    margin-left: 200px;
+  }
+}
+/*768*/
+@media (max-width:768px) {
+  .card{
+    width: 80%;
+    height: 600px;
+  }
+  .start img{
+    display: none;
+  }
+
+  .pasos{
+    margin-left: 50px;
+  }
+
+  .information{
+    margin-top: 20px;
+    margin-right: 200px;
+  }
+}
+
+
+
+/*425*/
+@media (max-width:425px) {
+  .card{
+   height: 1px;
+   width: 100%;
+   
+  }
+  .card h2,p {
+    font-size: 1px;
+    display: none;
+  }
+
+  .chart-area{
+    display: none;
+  }
+
+  .pulse{
+    display: none;
+  }
+  .start img{
+    display: none;
+  }
+
+  .faqLine{
+    width: 350px;
+  }
+
+  .pasos{
+    width: 70%;
+  }
+
+  .imagen{
+    display: none;
+  }
+
+  .TitlePasos{
+    font-size: 20px;
+  }
+  
+  .contenido h3, p{
+    font-size: 16px;
+  }
+
+  .start {
+    justify-content: flex-start; /* Alinear a la izquierda */
+  }
+
+  .start .text {
+    margin-left: 70px; /* Agregar margen izquierdo */
+  
+
+  }
+
+  .SeccionPasos .pasos .contenido p {
+    display: block;
+}
+
+  .info p {
+    display: block; /* Asegurarse de que los párrafos se muestren como bloques */
+    margin-bottom: 10px; /* Añadir un margen inferior para separar los párrafos */
+    font-size: 16px; /* Ajustar el tamaño de fuente si es necesario */
+  }
+
+  .animated-button {
+    margin-left: 1px; /* Ajustar el margen izquierdo del botón */
+    margin-top: 40px; /* Ajustar el margen superior del botón */
+    margin-bottom: 40px;
+    margin-right: 40px;
+    max-width: 320px;
+    
+  }
+
+  .animated-button .text{
+    text-align: start;
+    margin-right: 200px;
+    font-size: 14px;
+  }
+
+  .text h3 {
+    margin-left: 10px; /* Ajustar el margen izquierdo del texto */
+  }
+
+  .information {
+    margin-left: 10px; /* Agregar margen izquierdo */
+    margin-right: 10px; /* Agregar margen derecho */
+  }
+
+  .info {
+    padding: 0; /* Eliminar el relleno */
+  }
+
+  .info h2 {
+    font-size: 1.2em; /* Ajustar el tamaño del título */
+  }
+
+  .info p {
+    font-size: 0.9em; /* Ajustar el tamaño del texto */
+  }
+
+  .info h4 {
+    font-size: 0.8em; /* Ajustar el tamaño del texto */
+  }
+    
+  
+
+}
+
+
+
+
+/*375*/
+@media (max-width:375px) {
+  .card{
+   height: 1px;
+   width: 100%;
+   
+  }
+  .card h2,p {
+    font-size: 1px;
+    display: none;
+  }
+
+  .chart-area{
+    display: none;
+  }
+
+  .pulse{
+    display: none;
+  }
+  .start img{
+    display: none;
+  }
+
+  .faqLine{
+    width: 350px;
+  }
+
+  .pasos{
+    width: 70%;
+  }
+
+  .imagen{
+    display: none;
+  }
+
+  .TitlePasos{
+    font-size: 16px;
+  }
+  
+  .contenido h3, p{
+    font-size: 16px;
+  }
+
+  .start {
+    justify-content: flex-start; /* Alinear a la izquierda */
+  }
+
+  .start .text {
+    margin-left: 70px; /* Agregar margen izquierdo */
+  
+
+  }
+
+  .SeccionPasos .pasos .contenido p {
+    display: block;
+}
+
+  .info p {
+    display: block; /* Asegurarse de que los párrafos se muestren como bloques */
+    margin-bottom: 10px; /* Añadir un margen inferior para separar los párrafos */
+    font-size: 16px; /* Ajustar el tamaño de fuente si es necesario */
+  }
+
+  .animated-button {
+    margin-left: 0px; /* Ajustar el margen izquierdo del botón */
+    margin-top: 40px; /* Ajustar el margen superior del botón */
+    margin-bottom: 40px;
+    text-align: start;
+    max-width: 300px;
+    
+  }
+
+  .animated-button .text{
+    margin: auto;
+    font-size: 14px;
+  }
+
+  .text h3 {
+    margin-left: 10px; /* Ajustar el margen izquierdo del texto */
+  }
+
+  .information {
+    margin-left: 10px; /* Agregar margen izquierdo */
+    margin-right: 10px; /* Agregar margen derecho */
+  }
+
+  .info {
+    padding: 0; /* Eliminar el relleno */
+  }
+
+  .info h2 {
+    font-size: 1.2em; /* Ajustar el tamaño del título */
+  }
+
+  .info p {
+    font-size: 0.9em; /* Ajustar el tamaño del texto */
+  }
+
+  .info h4 {
+    font-size: 0.8em; /* Ajustar el tamaño del texto */
+  }
+    
+    .animated-button2{
+  
+      font-size: 20px;
+      
+    }
+
+      .equipo-seccion .encabezado{
+        font-size: 12px;
+      }
+}
+
+
+/*320*/
+@media (max-width:320px) {
+
+  .equipo-seccion .encabezado h2 {
+    font-size: 30px;
+  }
+
+  .carousel-inner{
+    height: 400px;
+  }
+
+  .carousel-inner h2{
+    font-size: 14px;
+  }
+
+  .card{
+   height: 1px;
+   width: 100%;
+   
+  }
+  .card h2,p {
+    font-size: 1px;
+    display: none;
+  }
+
+  .chart-area{
+    display: none;
+  }
+
+  .pulse{
+    display: none;
+  }
+  .start img{
+    display: none;
+  }
+
+  .faqLine{
+    width: 260px;
+  }
+
+  .pasos{
+    width: 70%;
+  }
+
+  .imagen{
+    display: none;
+  }
+
+  .TitlePasos{
+    font-size: 16px;
+  }
+  
+  .contenido h3, p{
+    font-size: 16px;
+  }
+
+  .start {
+    justify-content: flex-start; /* Alinear a la izquierda */
+  }
+
+  .start .text {
+    margin-left: 70px; /* Agregar margen izquierdo */
+  
+
+  }
+
+  .SeccionPasos .pasos .contenido p {
+    display: block;
+}
+
+  .info p {
+    display: block; /* Asegurarse de que los párrafos se muestren como bloques */
+    margin-bottom: 10px; /* Añadir un margen inferior para separar los párrafos */
+    font-size: 16px; /* Ajustar el tamaño de fuente si es necesario */
+  }
+
+  .animated-button {
+    margin-left: 0px; /* Ajustar el margen izquierdo del botón */
+    margin-top: 40px; /* Ajustar el margen superior del botón */
+    margin-bottom: 40px;
+
+    max-width: 200px;
+    
+  }
+
+  .animated-button .text{
+    margin: auto;
+    font-size: 10px;
+  }
+
+  .text h3 {
+    margin-left: 10px; /* Ajustar el margen izquierdo del texto */
+  }
+
+  .information {
+    margin-left: 10px; /* Agregar margen izquierdo */
+    margin-right: 10px; /* Agregar margen derecho */
+  }
+
+  .info {
+    padding: 0; /* Eliminar el relleno */
+  }
+
+  .info h2 {
+    font-size: 1.2em; /* Ajustar el tamaño del título */
+  }
+
+  .info p {
+    font-size: 0.9em; /* Ajustar el tamaño del texto */
+  }
+
+  .info h4 {
+    font-size: 0.8em; /* Ajustar el tamaño del texto */
+  }
+    
+    .animated-button2{
+  
+      font-size: 20px;
+      
+    }
+
+      .equipo-seccion .encabezado{
+        font-size: 12px;
+      }
+}
