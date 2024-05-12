@@ -971,6 +971,10 @@ body.scrolled::after {
 
 /*425*/
 @media (max-width:425px) {
+
+  .answer{
+    max-width: 300px;
+  }
   .card{
    height: 1px;
    width: 100%;
