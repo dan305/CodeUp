@@ -106,3 +106,4 @@ function toggleArrow(question) {
     const arrow = question.querySelector('.fa-arrow-up');
     arrow.classList.toggle('arrow-down');
 }
+
