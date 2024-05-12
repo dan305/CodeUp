@@ -277,12 +277,14 @@ hr {
     border-radius: 10px;
     font-weight: 600;
     color: #ffffff;
+    
     box-shadow: 0 0 0 2px #75C8E7;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     margin-left: 200px;
     margin-top: 50px;
+    
   }
   
   .animated-button svg {
@@ -308,7 +310,7 @@ hr {
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    background-color: #75C8E7;
+    background-color: #dadada0a;
     border-radius: 20%;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -317,6 +319,8 @@ hr {
   .animated-button .text {
     position: relative;
     z-index: 1;
+    text-decoration: none;
+    color: white;
     transform: translateX(-12px);
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
@@ -337,7 +341,7 @@ hr {
   
   .animated-button:hover .text {
     transform: translateX(12px);
-    border-bottom: 5px solid white;
+    
     border-radius: 2px;
   }
   
@@ -347,7 +351,7 @@ hr {
   
   .animated-button:active {
     scale: 0.95;
-    box-shadow: 0 0 0 4px #75C8E7;
+    box-shadow: 0 0 0 4px #ffffff;
   }
   
   .animated-button:hover .circle {
@@ -568,7 +572,7 @@ body.scrolled::after {
 .animated-button2 svg {
   position: absolute;
   width: 24px;
-  fill: #0466cf;
+  fill: #ffffff;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -588,7 +592,7 @@ body.scrolled::after {
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: #0466cf;
+  background-color: #dadada0a;
   border-radius: 20%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -597,14 +601,16 @@ body.scrolled::after {
 .animated-button2 .text {
   position: relative;
   z-index: 1;
+
   transform: translateX(-12px);
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .animated-button2:hover {
   box-shadow: 0 0 0 12px transparent;
-  color: #ffffff;
-  border-radius: 12px;
+    color: #ffffff;
+    border-radius: 12px;
+  
 }
 
 .animated-button2:hover .arr-1 {
@@ -617,7 +623,6 @@ body.scrolled::after {
 
 .animated-button2:hover .text {
   transform: translateX(12px);
-  border-bottom: 5px solid white;
   border-radius: 2px;
 }
 
