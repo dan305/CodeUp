@@ -657,6 +657,119 @@ body.scrolled::after {
   height: 3rem;
 }
 
+
+.animated-button3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 76px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 36px;
+  background-color: inherit;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px #0466cf;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.animated-button3 svg {
+  position: absolute;
+  width: 24px;
+  fill: #0466cf;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button3 .arr-1 {
+  right: 16px;
+}
+
+.animated-button3 .arr-2 {
+  left: -25%;
+}
+
+.animated-button3 .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #0466cf;
+  border-radius: 20%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button3 .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button3:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.animated-button3:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button3:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button3:hover .text {
+  transform: translateX(12px);
+  border-bottom: 5px solid white;
+  border-radius: 2px;
+}
+
+.animated-button3:hover svg {
+  fill: #ffffff;
+}
+
+.animated-button3:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #0466cf;
+}
+
+.animated-button3:hover .circle {
+  width: 620px;
+  height: 620px;
+  opacity: 1;
+}
+/* CARRUSEL*/
+
+.carousel-inner h2 {
+    color: white !important; 
+    font-family: Poppins-ExtraBold;
+    margin-top: 20px;
+}
+ .carousel-inner {
+  margin-top: 20px;
+  background-color: #26282b70;
+  height: 400px;
+  text-align: center;
+  margin-top: 100px;
+  padding: 100px;
+  color: #00A3FF;
+}
+
+.carousel-inner img{
+  width: 3rem;
+  height: 3rem;
+}
 /* FOOTER */
 
 .pie-pagina{
@@ -862,6 +975,10 @@ body.scrolled::after {
    height: 1px;
    width: 100%;
    
+  }
+
+  .animated-button3 .text{
+    max-width: 200px;
   }
   .card h2,p {
     font-size: 1px;
